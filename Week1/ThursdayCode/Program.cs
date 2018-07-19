@@ -10,6 +10,8 @@ namespace ThursdayCode
 	{
 		static void Main(string[] args)
 		{
+			// This is writeline stuff 
+			/*  anything i write here is also a comment */
 			Console.WriteLine(args[0]);
 			Console.WriteLine(args[1]);
 			Console.WriteLine(args[2]);
