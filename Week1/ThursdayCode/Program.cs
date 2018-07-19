@@ -50,6 +50,8 @@ namespace ThursdayCode
 			dbla = Convert.ToDouble(stra);
 			Console.WriteLine(string.Format("dbla has value {0} ", dbla));
 
+
+
 			stra = "true";
 			bla = Convert.ToBoolean(stra);
 			Console.WriteLine(string.Format("bla a has value {0} ", bla));
