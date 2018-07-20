@@ -32,11 +32,11 @@ namespace ThursdayCode
 
 			// -------------- LOCAL VARIABLE DECLARATION AND ASSIGNMENT ---
 			/* C# supports various DATA TYPES, the main ones we will use include int, double, bool, char and string */
-			int inta = 24, intb = -1828181;
-			double dbla = 12219.1211221, dblb = 4;
-			bool bla = true, blb = false;
-			char cha = 'A', chb = ',', chc = '&';
-			string stra = "Hello World";
+			int inta = 24, intb;
+			double dbla = 12219.1211221, dblb = 4, dblc;
+			bool bla = true, blb = false, blc;
+			char cha = 'A', chb = ',', chc = '&', chd;
+			string stra = "Hello World", strb;
 
 			Console.WriteLine(string.Format("inta has value {0} ", inta));
 
