@@ -19,7 +19,7 @@ namespace FridayCode
 			// the below does not work as the RHS is a double and the LHS an integer
 			//int num5 = 16 / 2.0; 
 
-			// ------------- ORDER OF PREDENCE
+			// ---------- ORDER OF PRECEDENCE
 			// The order goes 1. brackets, 2. multiplication and division, 3. addition and subtraction
 			int num4 = 5 + (6 * 2) / 4;
 
