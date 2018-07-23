@@ -22,8 +22,10 @@ namespace FridayCode
 			// ---------- ORDER OF PRECEDENCE
 			// The order goes 1. brackets, 2. multiplication and division, 3. addition and subtraction
 			int num4 = 5 + (6 * 2) / 4;
+			int num5 = 8 % (10 / 5) * 5;
+			int num6 = (9 * 5) % 2 / 3;
 
-			Console.WriteLine(string.Format("{0},{1},{2},{3}", num1,num2,num3,num4));
+			Console.WriteLine(string.Format("{0},{1},{2},{3},{4},{5}", num1,num2,num3,num4, num5, num6));
 			Console.ReadLine();
 		}
 	}
