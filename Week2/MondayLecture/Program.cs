@@ -18,7 +18,7 @@ namespace MondayLecture
 			long lg_a = 38921738921731;
 			short sh_a = -23564;
 			byte bt_a = 255;
-			double dbl_a = 1172771.20191;
+			double dbl_a = -1172771.20191;
 
 			int_a = bt_a; // this implicit cast from byte to int is allowed
 			int_a = sh_a; // this implicit cast from short to int is allowed
@@ -36,7 +36,7 @@ namespace MondayLecture
 			// ------------ BOOLEANS AND CONDITIONAL STATEMENTS
 			// Please see http://www.ict.ru.ac.za/resources/ThinkSharply/ThinkSharply/conditionals.html
 			bool bool_a = (5 < 7);
-			int x = 5;
+			int x = 9;
 			if(x > 5)
 			{
 				Console.WriteLine("The value is greater than 5");
