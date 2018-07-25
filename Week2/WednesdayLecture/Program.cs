@@ -8,9 +8,11 @@ namespace WednesdayLecture
 {
 	class Program
 	{
+		// ----- ENUMERATED TYPES
+		// This code defines three enum types and lists their constants
 		enum Days { Mon, Tues, Wed, Thur, Fri };
-		enum Something: short { Beginning, Middle, End };
-		enum Height : ulong { SHORT, TALL };
+		enum Race: short { Beginning, Middle, End };
+		enum Height : ulong { Short, Tall };
 
 		static void Main(string[] args)
 		{
@@ -31,6 +33,8 @@ namespace WednesdayLecture
 				c = -30;
 			}
 			
+			// ------- SWITCH STATEMENT
+			// This code switches on an integer variable
 			switch (a)
 			{
 				case 1000: { b = 10; c = -10; } break;
@@ -39,6 +43,8 @@ namespace WednesdayLecture
 				default: b = -1; c = -1; break;
 			}
 
+			// ------ SWITCH STATEMENT
+			// This code switches on an enum type
 			Days myDay = Days.Wed;
 			switch(myDay)
 			{
