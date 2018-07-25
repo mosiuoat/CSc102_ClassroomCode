@@ -8,6 +8,7 @@ namespace TuesdayLecture
 {
 	class Program
 	{
+		// ---- BOOLEAN VALUES, STATEMENTS AND CONDITIONAL EXPRESSIONS
 		static void Main(string[] args)
 		{
 			bool cond1 = true || false;
@@ -38,12 +39,9 @@ namespace TuesdayLecture
 			}
 			else 
 			{
-			Console.WriteLine("Greater than 0");
+				Console.WriteLine("Greater than 0");
 			}
-
-
-
-
+			
 			Console.ReadLine();
 		}
 	}
