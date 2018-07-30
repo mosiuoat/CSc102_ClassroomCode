@@ -1,2 +1,2 @@
 # CSc102_ClassroomCode
-It is customary with repositories to include a README that talks more about the project and offers instructions for instance on how to run or use your code
+This is where I will be uploading the source code of the C# projects that we code in class. The code is divided into solutions named after the weeks. So there will be four solutions come the end of the module. Each solution has a couple of projects named after the day in the week when that code was written. Daily projects should be available shortly after the lecture.
