@@ -1,0 +1,18 @@
+﻿<Window x:Class="WednesdayLecture.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WednesdayLecture"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="550.134" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="131*"/>
+        </Grid.ColumnDefinitions>
+        <Canvas x:Name="playground" Margin="65,113,64,29" Background="#FF70EE70" Grid.Column="1"/>
+        <Button x:Name="btnGo" Content="GO!!!" Grid.Column="1" HorizontalAlignment="Left" Margin="65,63,0,0" VerticalAlignment="Top" Width="91" Height="35" FontSize="16" FontWeight="Bold" FontStyle="Italic" Click="btnGo_Click"/>
+
+    </Grid>
+</Window>

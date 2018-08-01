@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MondayLecture", "MondayLect
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TuesdayLecture", "TuesdayLecture\TuesdayLecture.csproj", "{21F66FF0-083F-4F94-BCC6-C8DD80B42586}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WednesdayLecture", "WednesdayLecture\WednesdayLecture.csproj", "{718608D9-CBBD-4891-87C6-9859E87232DE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{21F66FF0-083F-4F94-BCC6-C8DD80B42586}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{21F66FF0-083F-4F94-BCC6-C8DD80B42586}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{21F66FF0-083F-4F94-BCC6-C8DD80B42586}.Release|Any CPU.Build.0 = Release|Any CPU
+		{718608D9-CBBD-4891-87C6-9859E87232DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{718608D9-CBBD-4891-87C6-9859E87232DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{718608D9-CBBD-4891-87C6-9859E87232DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{718608D9-CBBD-4891-87C6-9859E87232DE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
