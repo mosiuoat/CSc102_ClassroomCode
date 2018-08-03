@@ -1,0 +1,19 @@
+﻿<Window x:Class="FridayLecture.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FridayLecture"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Canvas x:Name="playground" Margin="67,56,50,17" Background="#FF70EE70"/>
+        <Button x:Name="btnGo" Content="GO!!!" HorizontalAlignment="Left" Margin="67,10,0,0" VerticalAlignment="Top" Width="94" Height="32" FontSize="16" FontWeight="Bold" FontStyle="Italic" Click="btnGo_Click"/>
+        <ComboBox x:Name="cmbColors" HorizontalAlignment="Left" Margin="271,10,0,0" VerticalAlignment="Top" Width="120" Height="32" FontSize="14" FontWeight="Bold">
+            <ComboBoxItem Content="BLACK"/>
+            <ComboBoxItem Content="YELLOW"/>
+            <ComboBoxItem Content="PURPLE"/>
+        </ComboBox>
+
+    </Grid>
+</Window>

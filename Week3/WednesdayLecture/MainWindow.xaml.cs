@@ -23,7 +23,9 @@ namespace WednesdayLecture
 	{
 		// We call tess an object aka an instance of type Turtle
 		// Turtle is the class, tess is the object (instance of the Turtle class)
-		Turtle tess; 
+		enum OPERATOR {  ADD, MINUS, MULT, DIV, ERROR, EXIT };
+		Turtle tess;
+		
 		public MainWindow()
 		{
 			// InitializeComponent() initialises GUI components - part of Window class
@@ -60,7 +62,6 @@ namespace WednesdayLecture
 			tess.Forward(75);
 			tess.Stamp();
 			tess.Forward(-75);
-
 		}
 	}
 }
