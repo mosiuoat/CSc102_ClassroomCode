@@ -43,7 +43,7 @@ namespace FridayLecture
 		/// <summary>
 		/// Draws footprints on the canvas
 		/// </summary>
-		private void DrawStamps()
+		void DrawStamps()
 		{
 			for (int i = 0; i < 12; i++)
 			{
@@ -53,6 +53,11 @@ namespace FridayLecture
 				tess.Left(30);
 			}
 			
+		}
+
+		void DrawSquare(int size)
+		{
+
 		}
 		/// <summary>
 		/// Event handler for the Go button click event
@@ -91,6 +96,11 @@ namespace FridayLecture
 				tess.Forward(-70);
 				tess.Left(30);
 			}
+		}
+
+		private void btnGo_Click_1(object sender, RoutedEventArgs e)
+		{
+
 		}
 	}
 }
