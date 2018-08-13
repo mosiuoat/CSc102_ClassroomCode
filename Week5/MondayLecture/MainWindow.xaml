@@ -8,7 +8,7 @@
         Title="MainWindow" Height="522" Width="800">
     <Grid>
         <Button x:Name="btnHeading" Content="Heading" HorizontalAlignment="Left" Margin="31,20,0,0" VerticalAlignment="Top" Width="90" Height="35" Click="btnHeading_Click"/>
-        <Canvas x:Name="canvas" HorizontalAlignment="Stretch" Height="Auto" Margin="31,92,32,71" VerticalAlignment="Stretch" Width="Auto" Background="#FF0CF1DD"/>
+        <Canvas x:Name="canvas" HorizontalAlignment="Stretch" Height="Auto" Margin="31,110,32,71" VerticalAlignment="Stretch" Width="Auto" Background="#FF0CF1DD"/>
         <Button x:Name="btnPosition" Content="Position" HorizontalAlignment="Left" Margin="235,20,0,0" VerticalAlignment="Top" Width="100" Height="35" Click="btnPosition_Click"/>
         <Button x:Name="btnRotate" Content="Rotate" HorizontalAlignment="Left" Margin="137,22,0,0" VerticalAlignment="Top" Width="85" Height="32" Click="btnRotate_Click"/>
         <Button x:Name="btnWarp" Content="Warp" HorizontalAlignment="Left" Margin="435,7,0,0" VerticalAlignment="Top" Width="95" Height="32" Click="btnWarp_Click"/>

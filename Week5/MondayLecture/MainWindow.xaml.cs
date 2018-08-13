@@ -41,16 +41,31 @@ namespace MondayLecture
 			Tester.TestEq(alex.Position, new Point(0, 0));
 
 			// this does the same thing
-			Point p = new Point(0, 0);
-			Tester.TestEq(alex.Position, p);
-			Tester.TestEq(alex.Position.X, p.X);
-			Tester.TestEq(alex.Position.Y, p.Y);
+			// Test Question: is the correctly turtle positioned at (0,0)
+			Point startingPosition = new Point(0, 0);
+			Tester.TestEq(alex.Position, startingPosition);
+			Tester.TestEq(alex.Position.X, startingPosition.X);
+			Tester.TestEq(alex.Position.Y, startingPosition.Y);
 
-			Tester.TestEq(getHeading(alex), 0);
-			rotate(alex, 180);
-			Tester.TestEq(alex.Heading, 180);
+			// Test Question: is the turtle's heading correctly set to 0 when I rotate it four times?
+			rotate(alex);
+			rotate(alex);
+			rotate(alex);
+			rotate(alex);
+			Tester.TestEq(alex.Heading, 0);
+
+			// Test Question: does rotate() affect the position of the turtle?
+			Tester.TestEq(alex.Position, startingPosition);
+
+			// Test Question: does warpto() affect the position of the turtle?
+			warpTo(alex, 200, 100);
+			Tester.TestFailEq(alex.Position, startingPosition);
+
+			// Test Question: does warpto() correctly set the X and Y coorindinates?
+			Tester.TestEq(alex.Position, new Point(200, 100));
+			Tester.TestFailEq(alex.Position, startingPosition);
 		}
-
+		
 		/// <summary>
 		/// Obtain the direction the turtle is facing
 		/// </summary>
@@ -59,13 +74,26 @@ namespace MondayLecture
 		{
 			return t.Heading;
 		}
+		
+		/// <summary>
+		/// Event handler to handle the heading click event
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
 		private void btnHeading_Click(object sender, RoutedEventArgs e)
 		{
 			MessageBox.Show(string.Format("{0}", getHeading(tess)));
 		}
-
 		/// <summary>
-		/// Rotate the turtle in clockwise direction
+		/// Rotates the turtle by 90 degrees clockwise
+		/// </summary>
+		/// <param name="t"></param>
+		void rotate(Turtle t)
+		{
+			t.Right(90);
+		}
+		/// <summary>
+		/// Rotate the turtle always in a clockwise direction
 		/// </summary>
 		/// <param name="angle">angle to rotate</param>
 		void rotate(Turtle t, double angle)
@@ -89,6 +117,11 @@ namespace MondayLecture
 			}
 		}
 
+		/// <summary>
+		/// Event handler to handler to rotate button click event
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
 		private void btnRotate_Click(object sender, RoutedEventArgs e)
 		{
 			rotate(tess, ROTATION.RIGHT, 90);
@@ -98,9 +131,9 @@ namespace MondayLecture
 		/// Returns the current position of the turtle
 		/// </summary>
 		/// <returns>The position of the Turtle as a Point</returns>
-		Point getPosition()
+		Point getPosition(Turtle t)
 		{
-			return tess.Position;
+			return t.Position;
 		}
 
 		/// <summary>
@@ -110,7 +143,7 @@ namespace MondayLecture
 		/// <param name="e"></param>
 		private void btnPosition_Click(object sender, RoutedEventArgs e)
 		{
-			Point p = getPosition();
+			Point p = getPosition(tess);
 			MessageBox.Show(string.Format("X is {0}, Y is {1}", p.X, p.Y));
 		}
 
@@ -119,10 +152,16 @@ namespace MondayLecture
 		/// </summary>
 		/// <param name="x">position in x axis to warp to</param>
 		/// <param name="y">position in y axis to warp to</param>
-		void warpTo(double x, double y)
+		void warpTo(Turtle t, double x, double y)
 		{
-			tess.WarpTo(x, y);
+			t.WarpTo(x, y);
 		}
+		
+		/// <summary>
+		/// Event handler to handle the button warp event click
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
 
 		private void btnWarp_Click(object sender, RoutedEventArgs e)
 		{
@@ -131,7 +170,7 @@ namespace MondayLecture
 				double x = Convert.ToDouble(txtXPos.Text);
 				double y = Convert.ToDouble(txtYPos.Text);
 
-				warpTo(x, y);
+				warpTo(tess, x, y);
 				return;
 			}
 			MessageBox.Show("Enter a value for the X and Y coorindates!!");
@@ -142,15 +181,20 @@ namespace MondayLecture
 		/// </summary>
 		/// <param name="x">distance to shift in x direction</param>
 		/// <param name="y">distance to shift in y direction</param>
-		void shift(double x, double y)
+		void shift(Turtle t, double x, double y)
 		{
 			Point p = tess.Position;
 			p.X = p.X + x;
 			p.Y = p.Y + y;
 
-			tess.WarpTo(p.X, p.Y);
+			warpTo(t, p.X, p.Y);
 		}
-
+		
+		/// <summary>
+		/// Event handler to handle the button shift event click
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
 		private void btnShift_Click(object sender, RoutedEventArgs e)
 		{
 			if (txtXPos.Text.Length > 0 && txtYPos.Text.Length > 0)
@@ -158,17 +202,22 @@ namespace MondayLecture
 				double x = Convert.ToDouble(txtXPos.Text);
 				double y = Convert.ToDouble(txtYPos.Text);
 
-				shift(x, y);
+				shift(tess, x, y);
 				return;
 			}
 
-			MessageBox.Show("Enter a value for the X and Y coorindates!!");
+			MessageBox.Show("Missing values for the X and Y co-orindates!!");
+		}
+		
+		/// <summary>
+		/// Stamps a footprint onto the canvas
+		/// </summary>
+		/// <param name="t">The stamping turtle</param>
+		void stamp(Turtle t)
+		{
+			t.Stamp();
 		}
 
-		void stamp()
-		{
-			tess.Stamp();
-		}
 		/// <summary>
 		/// Event handler to handle the stamp event
 		/// </summary>
@@ -176,7 +225,7 @@ namespace MondayLecture
 		/// <param name="e"></param>
 		private void btnStamp_Click(object sender, RoutedEventArgs e)
 		{
-			stamp();
+			stamp(tess);
 		}
 	}
 }
