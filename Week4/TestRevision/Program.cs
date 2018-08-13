@@ -42,7 +42,7 @@ namespace TestRevision
 		}
 		static void q15()
 		{
-			//char choice = 'y';
+			// char choice = 'y';
 			// The problems with the below switch are that:
 			// (1) There are no break statements at the end of the case statements
 			// (2) There is no default case
@@ -63,7 +63,7 @@ namespace TestRevision
 		}
 		static void q14()
 		{
-			int []nums = new int[] { 1, 2, 3, 4};
+			int [] nums = new int[] { 1, 3, 5, 7};
 			int mid = midPoint(nums);
 
 			Console.WriteLine(string.Format("Midpoint is {0}",midPoint(nums)));

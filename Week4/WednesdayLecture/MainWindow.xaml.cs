@@ -68,7 +68,14 @@ namespace WednesdayLecture
 			Point p = getPosition();
 			MessageBox.Show(string.Format("X is {0}, Y is {1}", p.X, p.Y));
 		}
-
+		/// <summary>
+		/// Rotate the turtle in clockwise direction
+		/// </summary>
+		/// <param name="angle">angle to rotate</param>
+		void rotate(double angle)
+		{
+			tess.Right(angle);
+		}
 		/// <summary>
 		/// Rotate the turtle left or right
 		/// </summary>
