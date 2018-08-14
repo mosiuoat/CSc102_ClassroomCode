@@ -64,6 +64,34 @@ namespace MondayLecture
 			// Test Question: does warpto() correctly set the X and Y coorindinates?
 			Tester.TestEq(alex.Position, new Point(200, 100));
 			Tester.TestFailEq(alex.Position, startingPosition);
+
+			Turtle leo = new Turtle(canvas);
+			leo.Visible = false;
+
+			// Test Question: does Stamp consistently manage Footprints collection?
+			stamp(leo);
+			Tester.TestEq(leo.Footprints.Count, 1);
+
+			warpTo(leo, 100, 100);
+
+			// Test Question: does Stamp consistently manage Footprints collection?
+			stamp(leo);
+			Tester.TestEq(leo.Footprints.Count, 2);
+			warpTo(leo, 200, 100);
+
+			// Test Question: does Stamp consistently manage Footprints collection?
+			stamp(leo);
+			Tester.TestEq(leo.Footprints.Count, 3);
+			warpTo(leo, 300, 100);
+
+			// Test Question: does Stamp consistently manage Footprints collection?
+			stamp(leo);
+			Tester.TestEq(leo.Footprints.Count, 4);
+
+			foreach (Footprint fp in leo.Footprints)
+			{
+				MessageBox.Show(string.Format("Turtle was at X pos {0} Y pos {1}", fp.Position.X, fp.Position.Y));
+			}
 		}
 		
 		/// <summary>
